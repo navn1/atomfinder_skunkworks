@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKER_HUB_PASS }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
+
+    - name: Build the tagged Docker image
+      working-directory: ./app
+      run: docker build --tag navn1/atomfinder_skunkworks:latest .
+
+    - name: Push the tagged Docker image
+      run: docker push navn1/atomfinder_skunkworks:latest
+
