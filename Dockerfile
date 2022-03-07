@@ -1,7 +1,5 @@
 FROM python:3.8
 
-LABEL author="naveen balu" 
-
 RUN mkdir /app
 
 WORKDIR /app
