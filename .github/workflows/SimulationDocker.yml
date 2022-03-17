@@ -21,7 +21,7 @@ jobs:
       run: echo ${{ secrets.DOCKER_HUB_PASS }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
 
     - name: Build the tagged Docker image
-      working-directory: .
+      working-directory: ./simulation
       run: docker build --tag navn1/atomfinder_skunkworks:simulation .
 
     - name: Push the tagged Docker image

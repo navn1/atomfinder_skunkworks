@@ -4,7 +4,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD pyTest.py /
+ADD simulationTestScript.py /
 
 RUN pip install abtem
 

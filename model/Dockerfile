@@ -4,13 +4,8 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD pyTest.py /
+ADD modelTestScript.py /
 
-RUN pip install abtem
-
-RUN pip install cupy-cuda112
+RUN pip install atomai
 
 CMD ["python3", "/modelTestScript.py"]
-
-
-
