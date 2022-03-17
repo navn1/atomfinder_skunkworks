@@ -6,7 +6,7 @@ We aim to create a model that accurately classifies atom positions within a give
 
 **Folder details:**
 The model folder contains the script to train the model, and a Dockerfile to specify how a docker image is to be built with the necessary dependencies (namely atomai). 
-The simulation folder contains the script to train the model, and a Dockerfile to specify how a docker image is to be built with the necessary dependencies (namely abtem). 
+The simulation folder contains the script to simulate STEM images for training given crystal CIF files, and a Dockerfile to specify how a docker image is to be built with the necessary dependencies (namely abtem). 
 
 **Workflows:**
 There are workflows in the workflows folder configured such that when a change is committed and pushed to either the models and/or simulation folders, a docker image will be built and pushed to a private docker repository. 
