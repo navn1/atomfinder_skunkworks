@@ -3,10 +3,11 @@ name: Simulation Docker Image CI
 on:
   push:
     branches: [ main ]
+    paths: simulation/**
   pull_request:
     branches: [ main ]
-  paths:
-      - simulation/**
+    paths: simulation/**
+  
 jobs:
 
   build:
