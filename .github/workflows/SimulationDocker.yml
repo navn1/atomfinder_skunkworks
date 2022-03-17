@@ -1,11 +1,12 @@
-name: Docker Image CI
+name: Simulation Docker Image CI
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+  paths:
+      - simulation/**
 jobs:
 
   build:
@@ -20,8 +21,8 @@ jobs:
 
     - name: Build the tagged Docker image
       working-directory: .
-      run: docker build --tag navn1/atomfinder_skunkworks:latest .
+      run: docker build --tag navn1/atomfinder_skunkworks:simulation .
 
     - name: Push the tagged Docker image
-      run: docker push navn1/atomfinder_skunkworks:latest
+      run: docker push navn1/atomfinder_skunkworks:simulation
 
