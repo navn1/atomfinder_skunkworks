@@ -14,3 +14,6 @@ There are workflows in the workflows folder configured such that when a change i
 Specifically, when there is a change pushed to the models folder, a workflow will be triggered to build a docker image that contains the script and its necessary dependencies, and then push that image to the docker repository under the "models" tag. 
 
 Likewise, when there is a change pushed to the simulations folder, a workflow will be triggered to build a docker image that contains the script and its necessary dependencies, and then push that image to the docker repository under the "simulation" tag
+
+**How to Use**
+Replace the modelTestScript.py with an updated model training script, and replace the simulationTestScript.py with an updated simulation script
