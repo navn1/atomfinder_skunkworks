@@ -4,13 +4,13 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD simulationTestScript.py /
+ADD simulationScript.py /
 
 RUN pip install abtem
 
 RUN pip install cupy-cuda112
 
-CMD ["python3", "/simulationTestScript.py"]
+CMD ["python3", "/simulationScript.py"]
 
 
 
