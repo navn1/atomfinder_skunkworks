@@ -10,7 +10,7 @@ RUN pip install abtem
 
 RUN pip install cupy-cuda112
 
-CMD ["python3", "/simulationScript.py"]
+CMD ["python3", "/simulationScript.py $value"]
 
 
 
