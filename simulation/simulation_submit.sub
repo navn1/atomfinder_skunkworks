@@ -6,7 +6,10 @@
 #  your job. Wherever you see $(Cluster), HTCondor will insert the
 #  queue number assigned to this set of jobs at the time of submission.
 universe = docker
+transfer_input_files = $PWD/silicon
+
 docker_image = navn1/atomfinder_skunkworks:simulation
+arguments = -v $PWD/silicon:/app/data
 log = log.simulation_$(Cluster)
 #
 # Specify your executable (single binary or a script that runs several
@@ -24,7 +27,8 @@ error = err.simulation_$(Cluster)_$(Process)
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 # transfer_input_files = file1,/absolute/pathto/file2,etc
-#
+
+
 # Tell HTCondor what amount of compute resources
 #  each job will need on the computer where it runs.
 request_cpus = 1

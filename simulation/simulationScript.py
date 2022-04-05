@@ -22,12 +22,20 @@ def structure_prep():
   file = read(os.getcwd() + '/' + sys.argv[1])
   file.center()
 
+  #Print contents of cif file for testing
+  f = open(sys.argv[1], 'r')
+  content = f.read()
+  print(content)
+
+
   #Volume : 50,50,600 angstrom
   #use 10,10 angstrom for test running
   XY = 50/(file.cell.cellpar()[0])
   Z = 600/(file.cell.cellpar()[2])
 
-  mindices = int(sys.argv[2])
+  mindices = int(open(sys.argv[2], 'r').read())
+
+  print("Miller Indices: " + str(mindices))   #Print miller indices for testing
   i1 = (int)(mindices%10)
   mindices/=10
   i2 = (int)(mindices%10)
@@ -54,7 +62,9 @@ def simulate(struct_o):
   potential = Potential(struct_o, sampling = 0.01, slice_thickness=2, projection='infinite', parametrization='kirkland', device ='gpu')
 
   from abtem.scan import GridScan
-  pixelsize =(float)(sys.argv[3]) # probe scan step size in angstrom, varies between 0.05, 0.15, 0.25, 0.35, 0.45 angstrom
+  pixelsize =(float)(open(sys.argv[3], 'r').read()) # probe scan step size in angstrom, varies between 0.05, 0.15, 0.25, 0.35, 0.45 angstrom
+  
+  print("Pixel Size: " + str(pixelsize))  #Print pixel size for testing
 
   # integrate potential and generate image for thickness of 12,24,36,48,60 nm
   # Go thickness dowm to taking use of intermediate result in memory
