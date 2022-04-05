@@ -22,9 +22,10 @@ def structure_prep():
   file = read(os.getcwd() + '/' + sys.argv[1])
   file.center()
 
-  #Volume : 5,5,60 nm, use 5nm for test now
-  XY = 10/(file.cell.cellpar()[0])
-  Z = 12/(file.cell.cellpar()[2])
+  #Volume : 50,50,600 angstrom
+  #use 10,10 angstrom for test running
+  XY = 50/(file.cell.cellpar()[0])
+  Z = 600/(file.cell.cellpar()[2])
 
   mindices = int(sys.argv[2])
   i1 = (int)(mindices%10)
