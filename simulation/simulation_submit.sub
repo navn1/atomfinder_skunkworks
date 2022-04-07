@@ -33,7 +33,7 @@ when_to_transfer_output = ON_EXIT
 #  each job will need on the computer where it runs.
 request_cpus = 1
 request_GPUs = 1
-request_memory = 100GB
+request_memory = 10GB
 request_disk = 2000MB
 #
 #
