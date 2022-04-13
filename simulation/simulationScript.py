@@ -5,7 +5,7 @@ Modified: Jingrui Wei
 Test verision with small thickness, no thickness loop, and no pixel size loop.
 
 DO the following changes once passed test and run simulations. 
-- line31: Z = 12/(file.cell.cellpar()[2]) -->  Z = 12/(file.cell.cellpar()[2])
+- line31: Z = 12/(file.cell.cellpar()[2]) -->  Z = 600/(file.cell.cellpar()[2])
 - line67: for slicenum in slicelist[:1]: --> for slicenum in slicelist:
 - line100-103: uncomment
 '''
