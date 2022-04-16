@@ -9,7 +9,7 @@ universe = docker
 transfer_input_files = silicon/data
 
 docker_image = navn1/atomfinder_skunkworks:simulation
-# arguments = -v silicon:/app/data
+arguments = --gpus all
 log = log.simulation_$(Cluster)
 #
 # Specify your executable (single binary or a script that runs several
