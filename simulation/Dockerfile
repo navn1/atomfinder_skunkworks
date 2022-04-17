@@ -19,9 +19,9 @@ RUN pip install abtem
 # RUN pip install numpy==1.21 
 # RUN pip install cupy-cuda111
 
-# CMD ["python3", "/simulationScript.py", "data/crystal.cif", "data/miller_indices.txt", "data/pixelsize_angstrom.txt"]
-COPY commandsToRun.sh /commands.sh
-RUN ["chmod", "+x", "/commands.sh"]
-ENTRYPOINT ["/commands.sh"]
+ CMD ["python3", "/simulationScript.py", "data/crystal.cif", "data/miller_indices.txt", "data/pixelsize_angstrom.txt"]
+# COPY commandsToRun.sh /commands.sh
+# RUN ["chmod", "+x", "/commands.sh"]
+# ENTRYPOINT ["/commands.sh"]
 
 
