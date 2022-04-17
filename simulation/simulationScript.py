@@ -95,14 +95,14 @@ def simulate(struct_o, pixelsize):
   cropped = np.array(list(cropped))  
   # save the simulated images and coordinates in a single npz file
   mindices = int(open(sys.argv[2], 'r').read())
-  np.savez("/var/local/crystaldata/"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.npz', images = images, coordinates = cropped)
+  np.savez("./"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.npz', images = images, coordinates = cropped)
   print('All simulated results saved. ')
 
   # Make visulization figure to check the result
   fig = plt.figure(figsize = (10,10))
   plt.imshow(images[-1])
   plt.scatter(cropped[:,1]/pixelsize, cropped[:,0]/pixelsize ,c = 'r', s = 1)
-  fig.savefig("/var/local/crystaldata/"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.tif')
+  fig.savefig("./"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.tif')
 
 
 if __name__ == "__main__":
