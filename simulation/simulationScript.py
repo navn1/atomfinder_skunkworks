@@ -28,6 +28,10 @@ def structure_prep():
   f = open(sys.argv[1], 'r')
   content = f.read()
   print(content)
+
+  setup()
+  print("CUPY CACHE: " + os.environ["CUPY_CACHE_DIR"])
+  print("MPLCONFIGDIR: " + os.environ["MPLCONFIGDIR"])
   
   #Max volume: 60 nm
   Z = 12/(file.cell.cellpar()[2])
@@ -56,9 +60,7 @@ def simulate(struct_o, pixelsize):
   from abtem.temperature import FrozenPhonons  
   from abtem.measure import Measurement
 
-  setup()
-  print("CUPY CACHE: " + os.environ["CUPY_CACHE_DIR"])
-  print("MPLCONFIGDIR: " + os.environ["MPLCONFIGDIR"])
+
 
   # To keep things simple, we will ignore the thermal vibration here. 
   #fp = FrozenPhonons(struct_o, num_configs = int(sys.argv[3]), sigmas = sigmadict)
