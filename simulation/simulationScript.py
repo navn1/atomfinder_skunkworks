@@ -19,7 +19,7 @@ from ase.io import read
 from ase.build import surface
 from abtem import *
 import matplotlib.pyplot as plt
-
+mindices = 0
 def structure_prep():
   file = read(os.getcwd() + '/' + sys.argv[1])
   file.center()
@@ -85,14 +85,15 @@ def simulate(struct_o, pixelsize):
   cropped = filter(lambda point: (point[0] < pixelsize*100) & (point[1] < pixelsize*100), posxy)
   cropped = np.array(list(cropped))  
   # save the simulated images and coordinates in a single npz file
-  np.savez(sys.argv[1][:-4] + sys.argv[2] + '_px'+ str(int(pixelsize*100)) + 'pm.npz', images = images, coordinates = cropped)
+  mindices = int(open(sys.argv[2], 'r').read())
+  np.savez("data/"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.npz', images = images, coordinates = cropped)
   print('All simulated results saved. ')
 
   # Make visulization figure to check the result
   fig = plt.figure(figsize = (10,10))
   plt.imshow(images[-1])
   plt.scatter(cropped[:,1]/pixelsize, cropped[:,0]/pixelsize ,c = 'r', s = 1)
-  fig.savefig(sys.argv[1][:-4] + sys.argv[2] + '_px'+ str(int(pixelsize*100)) + 'pm.tif')
+  fig.savefig("data/"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.tif')
 
 
 if __name__ == "__main__":
