@@ -10,6 +10,7 @@ DO the following changes once passed test and run simulations.
 - line100-103: uncomment
 '''
 import os
+from re import S
 import sys
 import ase
 import abtem
@@ -48,11 +49,15 @@ def structure_prep():
  
   return stucture_o
 
+def setup():
+  os.environ["CUPY_CACHE_DIR"] = os.getcwd() + "/cupyCache"
+  os.environ["MPLCONFIGDIR"] = os.getcwd() + "/mplconfig"
 
 def simulate(struct_o, pixelsize): 
   from abtem.temperature import FrozenPhonons  
   from abtem.measure import Measurement
 
+  setup()
   # To keep things simple, we will ignore the thermal vibration here. 
   #fp = FrozenPhonons(struct_o, num_configs = int(sys.argv[3]), sigmas = sigmadict)
 
