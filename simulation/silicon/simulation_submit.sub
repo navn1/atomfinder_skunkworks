@@ -38,7 +38,7 @@ transfer_output_files = ./data/
 environment = "CUPY_CACHE_DIR=""/var/local/cupycache"" MPLCONFIGDIR=""/var/local/mplconfigdir"""
 request_cpus = 1
 request_gpus = 1
-request_memory = 70GB
+request_memory = 100GB
 request_disk = 2000MB
 #
 #
