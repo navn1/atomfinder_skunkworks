@@ -109,6 +109,7 @@ if __name__ == "__main__":
     # probe scan step size in angstrom varies between 0.05, 0.15, 0.25, 0.35, 0.45
     simulate(structure_prep(), pixelsize=0.05)  
     simulate(structure_prep(), pixelsize=0.15)
-    simulate(structure_prep(), pixelsize=0.45)
+    simulate(structure_prep(), pixelsize=0.25) 
     simulate(structure_prep(), pixelsize=0.35)
-    simulate(structure_prep(), pixelsize=0.25)  
+    simulate(structure_prep(), pixelsize=0.45)
+ 
