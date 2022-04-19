@@ -36,13 +36,14 @@ def structure_prep():
   #Max volume: 60 nm
   Z = 600/(file.cell.cellpar()[2])  
 
-  mindices = int(open(sys.argv[2], 'r').read())
-  print("Miller Indices: " + str(mindices))   #Print miller indices for testing
-  i1 = (int)(mindices%10)
-  mindices/=10
-  i2 = (int)(mindices%10)
-  mindices/=10
-  i3 = (int)(mindices%10)
+  mindices = str(open(sys.argv[2], 'r').read())
+  i1 = (int)(mindices[0])
+  i2 = (int)(mindices[1])
+  i3 = (int)(mindices[2])
+
+  print("Miller Indices: " + mindices)   #Print miller indices for testing
+  print("i1: "+str(i1)+"i2: "+str(i2)+"i3: "+str(i3)) 
+  
   stucture = surface(file, indices=(i1, i2, i3), layers=int(Z), periodic=True) # tile along z direction
  
   #stucture*=(int(XY),int(XY),1)
