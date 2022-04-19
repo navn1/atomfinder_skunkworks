@@ -25,9 +25,9 @@ def structure_prep():
   file.center()
   
   #Print contents of cif file for testing
-  f = open(sys.argv[1], 'r')
-  content = f.read()
-  print(content)
+  # f = open(sys.argv[1], 'r')
+  # content = f.read()
+  # print(content)
 
   setup()
   print("CUPY CACHE: " + os.environ["CUPY_CACHE_DIR"])
@@ -59,8 +59,6 @@ def setup():
 def simulate(struct_o, pixelsize): 
   from abtem.temperature import FrozenPhonons  
   from abtem.measure import Measurement
-
-
 
   # To keep things simple, we will ignore the thermal vibration here. 
   #fp = FrozenPhonons(struct_o, num_configs = int(sys.argv[3]), sigmas = sigmadict)
