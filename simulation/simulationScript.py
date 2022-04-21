@@ -20,7 +20,7 @@ from ase.io import read
 from ase.build import surface
 from abtem import *
 import matplotlib.pyplot as plt
-mindices = 0
+
 def structure_prep(i1:int,i2:int,i3:int):
   file = read(os.getcwd() + '/' + sys.argv[1])
   file.center()
@@ -66,7 +66,7 @@ def setup():
   os.environ["CUPY_CACHE_DIR"] = os.getcwd() + "/cupyCache"
   os.environ["MPLCONFIGDIR"] = os.getcwd() + "/mplconfig"
 
-def simulate(struct_o, pixelsize): 
+def simulate(mindices:str, struct_o, pixelsize): 
   from abtem.temperature import FrozenPhonons  
   from abtem.measure import Measurement
 
@@ -102,7 +102,6 @@ def simulate(struct_o, pixelsize):
   cropped = filter(lambda point: (point[0] < pixelsize*100) & (point[1] < pixelsize*100), posxy)
   cropped = np.array(list(cropped))  
   # save the simulated images and coordinates in a single npz file
-  mindices = int(open(sys.argv[2], 'r').read())
   np.savez("./data/"+"Crystal" + str(mindices) + '_px'+ str(int(pixelsize*100)) + 'pm.npz', images = images, coordinates = cropped)
   print('All simulated results saved. ')
 
@@ -116,9 +115,6 @@ def simulate(struct_o, pixelsize):
 if __name__ == "__main__":
     # probe scan step size in angstrom varies between 0.05, 0.15, 0.25, 0.35, 0.45
   mindices = open(sys.argv[2], 'r')
-  i1 = 0
-  i2 = 0
-  i3 = 0
 
   data = json.load(mindices)
 
@@ -126,12 +122,13 @@ if __name__ == "__main__":
       i1= index.get('i1')
       i2= index.get('i2')
       i3 = index.get('i3')
-      print("i1: "+str(i1)+"i2: "+str(i2)+"i3: "+str(i3)) 
-      simulate(structure_prep(i1,i2,i3), pixelsize=0.05)  
-      simulate(structure_prep(), pixelsize=0.15)
-      simulate(structure_prep(), pixelsize=0.25) 
-      simulate(structure_prep(), pixelsize=0.35)
-      simulate(structure_prep(), pixelsize=0.45)
+      print("i1: "+str(i1)+"i2: "+str(i2)+"i3: "+str(i3))
+      mindices = str(i1)+str(i2)+str(i3) 
+      simulate(mindices, structure_prep(i1,i2,i3), pixelsize=0.05)  
+      simulate(mindices, structure_prep(i1,i2,i3), pixelsize=0.15)
+      simulate(mindices, structure_prep(i1,i2,i3), pixelsize=0.25) 
+      simulate(mindices, structure_prep(i1,i2,i3), pixelsize=0.35)
+      simulate(mindices, structure_prep(i1,i2,i3), pixelsize=0.45)
 
 
  
