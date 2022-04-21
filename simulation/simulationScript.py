@@ -9,6 +9,7 @@ DO the following changes once passed test and run simulations.
 - line67: for slicenum in slicelist[:1]: --> for slicenum in slicelist:
 - line100-103: uncomment
 '''
+import json
 import os
 import sys
 import ase
@@ -20,7 +21,7 @@ from ase.build import surface
 from abtem import *
 import matplotlib.pyplot as plt
 mindices = 0
-def structure_prep():
+def structure_prep(i1:int,i2:int,i3:int):
   file = read(os.getcwd() + '/' + sys.argv[1])
   file.center()
   
@@ -36,13 +37,21 @@ def structure_prep():
   #Max volume: 60 nm
   Z = 600/(file.cell.cellpar()[2])  
 
-  mindices = str(open(sys.argv[2], 'r').read())
-  i1 = (int)(mindices[0])
-  i2 = (int)(mindices[1])
-  i3 = (int)(mindices[2])
+  # mindices = open(sys.argv[2], 'r')
+  # i1 = 0
+  # i2 = 0
+  # i3 = 0
 
-  print("Miller Indices: " + mindices)   #Print miller indices for testing
-  print("i1: "+str(i1)+"i2: "+str(i2)+"i3: "+str(i3)) 
+  # data = json.load(mindices)
+
+  # for index in data["indices_list"]:
+  #     i1= index.get('i1')
+  #     i2= index.get('i2')
+  #     i3 = index.get('i3')
+  #     print(str(i1)+str(i2)+str(i3))
+  #     print(index)
+
+  # print("i1: "+str(i1)+"i2: "+str(i2)+"i3: "+str(i3)) 
   
   stucture = surface(file, indices=(i1, i2, i3), layers=int(Z), periodic=True) # tile along z direction
  
@@ -106,9 +115,23 @@ def simulate(struct_o, pixelsize):
 
 if __name__ == "__main__":
     # probe scan step size in angstrom varies between 0.05, 0.15, 0.25, 0.35, 0.45
-    simulate(structure_prep(), pixelsize=0.05)  
-    simulate(structure_prep(), pixelsize=0.15)
-    simulate(structure_prep(), pixelsize=0.25) 
-    simulate(structure_prep(), pixelsize=0.35)
-    simulate(structure_prep(), pixelsize=0.45)
+  mindices = open(sys.argv[2], 'r')
+  i1 = 0
+  i2 = 0
+  i3 = 0
+
+  data = json.load(mindices)
+
+  for index in data["indices_list"]:
+      i1= index.get('i1')
+      i2= index.get('i2')
+      i3 = index.get('i3')
+      print("i1: "+str(i1)+"i2: "+str(i2)+"i3: "+str(i3)) 
+      simulate(structure_prep(i1,i2,i3), pixelsize=0.05)  
+      simulate(structure_prep(), pixelsize=0.15)
+      simulate(structure_prep(), pixelsize=0.25) 
+      simulate(structure_prep(), pixelsize=0.35)
+      simulate(structure_prep(), pixelsize=0.45)
+
+
  

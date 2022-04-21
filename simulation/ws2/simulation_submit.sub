@@ -33,6 +33,7 @@ transfer_output_files = ./data/
 # Tell HTCondor what amount of compute resources
 #  each job will need on the computer where it runs.
 #requirements = (CUDADriverVersion == 11.2)
+requirements = (CUDAGlobalMemoryMB > 20000)
 +WantGPULab = true
 +GPUJobLength = "short"
 environment = "CUPY_CACHE_DIR=""/var/local/cupycache"" MPLCONFIGDIR=""/var/local/mplconfigdir"""
@@ -40,7 +41,5 @@ request_cpus = 1
 request_gpus = 1
 request_memory = 100GB
 request_disk = 2000MB
-#
-#
 # Tell HTCondor to run 1 instance of our job:
 queue 1
