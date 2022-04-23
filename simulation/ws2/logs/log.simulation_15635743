@@ -1,0 +1,77 @@
+000 (15635743.000.000) 2022-04-19 14:11:51 Job submitted from host: <128.105.244.191:9618?addrs=128.105.244.191-9618&alias=submit-1.chtc.wisc.edu&noUDP&sock=schedd_3562897_9248>
+...
+040 (15635743.000.000) 2022-04-19 14:12:07 Started transferring input files
+	Transferring to host: <128.105.68.167:9618?addrs=128.105.68.167-9618+[2607-f388-2200-100-b62e-99ff-feb7-2dc1]-9618&alias=gpulab2002.chtc.wisc.edu&noUDP&sock=slot1_6_256185_420b_24803>
+...
+001 (15635743.000.000) 2022-04-19 14:12:07 Job executing on host: <128.105.68.167:9618?addrs=128.105.68.167-9618+[2607-f388-2200-100-b62e-99ff-feb7-2dc1]-9618&alias=gpulab2002.chtc.wisc.edu&noUDP&sock=startd_46833_1efe>
+...
+040 (15635743.000.000) 2022-04-19 14:12:07 Finished transferring input files
+...
+006 (15635743.000.000) 2022-04-19 14:22:16 Image size of job updated: 344
+	344  -  MemoryUsage of job (MB)
+	353252  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 14:37:17 Image size of job updated: 344
+	344  -  MemoryUsage of job (MB)
+	353260  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 14:42:18 Image size of job updated: 345
+	345  -  MemoryUsage of job (MB)
+	353288  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 14:57:19 Image size of job updated: 345
+	345  -  MemoryUsage of job (MB)
+	353296  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 15:07:22 Image size of job updated: 345
+	345  -  MemoryUsage of job (MB)
+	353300  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 15:17:22 Image size of job updated: 354
+	354  -  MemoryUsage of job (MB)
+	362724  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 15:37:25 Image size of job updated: 354
+	354  -  MemoryUsage of job (MB)
+	362740  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 15:52:26 Image size of job updated: 354
+	354  -  MemoryUsage of job (MB)
+	362748  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 16:15:23 Image size of job updated: 359
+	359  -  MemoryUsage of job (MB)
+	367876  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 16:35:26 Image size of job updated: 359
+	359  -  MemoryUsage of job (MB)
+	367896  -  ResidentSetSize of job (KB)
+...
+006 (15635743.000.000) 2022-04-19 17:10:16 Image size of job updated: 363
+	363  -  MemoryUsage of job (MB)
+	372128  -  ResidentSetSize of job (KB)
+...
+040 (15635743.000.000) 2022-04-19 17:10:16 Started transferring output files
+...
+040 (15635743.000.000) 2022-04-19 17:10:16 Finished transferring output files
+...
+005 (15635743.000.000) 2022-04-19 17:10:17 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 01:54:47, Sys 0 00:55:59  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 01:54:47, Sys 0 00:55:59  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	13035881  -  Run Bytes Sent By Job
+	4592  -  Run Bytes Received By Job
+	13035881  -  Total Bytes Sent By Job
+	4592  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :     0.00        1         1 
+	   Disk (KB)            : 13274     2048000   5288195 
+	   Gpus (Average)       :     0.94        1         1 "GPU-b48acfe4"
+	   GpusMemory (MB)      :  9721                       
+	   IoHeavy              :                           0 
+	   Memory (MB)          :   363      102400    102400 
+
+	Job terminated of its own accord at 2022-04-19T22:10:16Z with exit-code 1.
+...

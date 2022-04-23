@@ -1,0 +1,53 @@
+000 (15643733.000.000) 2022-04-21 17:31:15 Job submitted from host: <128.105.244.191:9618?addrs=128.105.244.191-9618&alias=submit-1.chtc.wisc.edu&noUDP&sock=schedd_3562897_9248>
+...
+040 (15643733.000.000) 2022-04-21 17:31:22 Started transferring input files
+	Transferring to host: <128.105.68.76:9618?addrs=128.105.68.76-9618+[2607-f388-2200-100-3eec-efff-fe0c-56de]-9618&alias=gpulab2005.chtc.wisc.edu&noUDP&sock=slot1_4_34723_3e9d_21122>
+...
+001 (15643733.000.000) 2022-04-21 17:31:22 Job executing on host: <128.105.68.76:9618?addrs=128.105.68.76-9618+[2607-f388-2200-100-3eec-efff-fe0c-56de]-9618&alias=gpulab2005.chtc.wisc.edu&noUDP&sock=startd_10926_e7db>
+...
+040 (15643733.000.000) 2022-04-21 17:31:22 Finished transferring input files
+...
+006 (15643733.000.000) 2022-04-21 17:31:30 Image size of job updated: 212
+	212  -  MemoryUsage of job (MB)
+	217688  -  ResidentSetSize of job (KB)
+...
+006 (15643733.000.000) 2022-04-21 17:36:30 Image size of job updated: 351
+	351  -  MemoryUsage of job (MB)
+	360388  -  ResidentSetSize of job (KB)
+...
+006 (15643733.000.000) 2022-04-21 17:41:30 Image size of job updated: 351
+	351  -  MemoryUsage of job (MB)
+	360404  -  ResidentSetSize of job (KB)
+...
+006 (15643733.000.000) 2022-04-21 17:51:32 Image size of job updated: 351
+	351  -  MemoryUsage of job (MB)
+	360416  -  ResidentSetSize of job (KB)
+...
+006 (15643733.000.000) 2022-04-21 17:56:33 Image size of job updated: 351
+	351  -  MemoryUsage of job (MB)
+	360424  -  ResidentSetSize of job (KB)
+...
+040 (15643733.000.000) 2022-04-21 17:57:52 Started transferring output files
+...
+040 (15643733.000.000) 2022-04-21 17:57:52 Finished transferring output files
+...
+005 (15643733.000.000) 2022-04-21 17:57:53 Job terminated.
+	(1) Normal termination (return value 1)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:15:26, Sys 0 00:09:43  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	146038  -  Run Bytes Sent By Job
+	4646  -  Run Bytes Received By Job
+	146038  -  Total Bytes Sent By Job
+	4646  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :     0.00        1         1 
+	   Disk (KB)            :   687     2048000   2861183 
+	   Gpus (Average)       :     0.97        1         1 "GPU-fb408d80"
+	   GpusMemory (MB)      :  6527                       
+	   IoHeavy              :                           0 
+	   Memory (MB)          :   351      102400    102400 
+
+	Job terminated of its own accord at 2022-04-21T22:57:52Z with exit-code 1.
+...
