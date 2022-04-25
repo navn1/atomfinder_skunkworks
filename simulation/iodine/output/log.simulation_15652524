@@ -211,3 +211,67 @@
 	482  -  MemoryUsage of job (MB)
 	494212  -  ResidentSetSize of job (KB)
 ...
+006 (15652524.000.000) 2022-04-23 23:29:49 Image size of job updated: 482
+	482  -  MemoryUsage of job (MB)
+	494216  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 07:15:27 Image size of job updated: 483
+	483  -  MemoryUsage of job (MB)
+	494784  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 07:20:27 Image size of job updated: 483
+	483  -  MemoryUsage of job (MB)
+	494788  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 09:45:40 Image size of job updated: 483
+	483  -  MemoryUsage of job (MB)
+	494792  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 13:06:04 Image size of job updated: 483
+	483  -  MemoryUsage of job (MB)
+	494796  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 14:36:13 Image size of job updated: 487
+	487  -  MemoryUsage of job (MB)
+	499084  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 17:01:27 Image size of job updated: 487
+	487  -  MemoryUsage of job (MB)
+	499088  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 19:01:40 Image size of job updated: 487
+	487  -  MemoryUsage of job (MB)
+	499092  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-24 21:56:57 Image size of job updated: 491
+	491  -  MemoryUsage of job (MB)
+	503400  -  ResidentSetSize of job (KB)
+...
+006 (15652524.000.000) 2022-04-25 03:47:34 Image size of job updated: 491
+	491  -  MemoryUsage of job (MB)
+	503404  -  ResidentSetSize of job (KB)
+...
+040 (15652524.000.000) 2022-04-25 05:11:20 Started transferring output files
+...
+040 (15652524.000.000) 2022-04-25 05:11:21 Finished transferring output files
+...
+005 (15652524.000.000) 2022-04-25 05:11:21 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 1 01:33:39, Sys 0 23:12:09  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	87728784  -  Run Bytes Sent By Job
+	1039  -  Run Bytes Received By Job
+	87728784  -  Total Bytes Sent By Job
+	1039  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated Assigned
+	   Cpus                 :     0.01        1         1 
+	   Disk (KB)            : 86292     2048000   7032931 
+	   Gpus (Average)       :     0.99        1         1 "GPU-b1274dcc"
+	   GpusMemory (MB)      : 42963                       
+	   IoHeavy              :                           0 
+	   Memory (MB)          :   491      102400    102400 
+
+	Job terminated of its own accord at 2022-04-25T10:11:20Z with exit-code 0.
+...
