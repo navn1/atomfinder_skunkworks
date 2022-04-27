@@ -6,6 +6,9 @@ FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
 
 ADD modelTrainingScript.py /
 
+RUN apt-get update && apt-get install -y python3-opencv
+RUN pip install opencv-python
+
 RUN pip install atomai
 
 CMD ["python3", "/modelTrainingScript.py"]
