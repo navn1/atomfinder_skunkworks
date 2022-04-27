@@ -1,8 +1,8 @@
-FROM python:3.8
+FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
 
-RUN mkdir /app
+# RUN mkdir /app
 
-WORKDIR /app
+# WORKDIR /app
 
 ADD modelTestScript.py /
 

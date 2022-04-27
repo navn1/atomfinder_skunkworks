@@ -3,4 +3,4 @@
 # content = f.read()
 # print(content)
 # f.close()
-# print("Im a model test script!")
+print("Im a model test script!")
