@@ -4,8 +4,8 @@ FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
 
 # WORKDIR /app
 
-ADD modelTestScript.py /
+ADD modelTrainingScript.py /
 
 RUN pip install atomai
 
-CMD ["python3", "/modelTestScript.py"]
+CMD ["python3", "/modelTrainingScript.py"]
