@@ -12,4 +12,4 @@ RUN pip install opencv-python
 
 RUN pip install atomai
 
-CMD ["python3", "/modelTrainingScript.py"]
+CMD ["python3", "/modelTrainingScript.py", "data/Trainingdata.npz"]
