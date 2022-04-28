@@ -22,6 +22,7 @@ def makeModel():
   model_semantic = aoi.models.Segmentor(model = 'SegResNet', nb_classes=3)
 
   print('Start training.')
+  print('Test message')
   
   # You can use the much smaller training_cycles for testing, adjust it according to training convergence
   model_semantic.fit(images_all, labels_all, images_test, labels_test, training_cycles=500, 
