@@ -3,7 +3,8 @@ name: Model Docker Image CI
 on:
   push:
     branches: [ main ]
-    paths: model/**
+    paths: 
+      - model/Dockerfile
   pull_request:
     branches: [ main ]
     paths: model/**
@@ -21,8 +22,8 @@ jobs:
 
     - name: Build the tagged Docker image
       working-directory: ./model
-      run: docker build --tag navn1/atomfinder_skunkworks:model .
+      run: docker build --tag navn1/atomfinder_skunkworks:model1 .
 
     - name: Push the tagged Docker image
-      run: docker push navn1/atomfinder_skunkworks:model
+      run: docker push navn1/atomfinder_skunkworks:model1
 
