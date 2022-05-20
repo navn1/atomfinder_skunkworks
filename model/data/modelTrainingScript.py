@@ -23,7 +23,7 @@ def makeModel():
 
   print('Start training.')
   # You can use the much smaller training_cycles for testing, adjust it according to training convergence
-  model_semantic.fit(images_all, labels_all, images_test, labels_test, training_cycles=500, 
+  model_semantic.fit(images_all, labels_all, images_test, labels_test, loss='mse', training_cycles=500, 
   plot_training_history = False, compute_accuracy = True, swa=True, filename = './data/model_'+ curDT.strftime("%m%d_%H%M"))
   
 if __name__ == "__main__":
