@@ -3,8 +3,7 @@ name: Model Docker Image CI
 on:
   push:
     branches: [ main ]
-    paths: 
-      - model/Dockerfile
+    paths: model/**
   pull_request:
     branches: [ main ]
     paths: model/**
