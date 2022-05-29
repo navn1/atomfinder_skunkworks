@@ -1,0 +1,63 @@
+Unable to find image 'navn1/atomfinder_skunkworks:simulation' locally
+simulation: Pulling from navn1/atomfinder_skunkworks
+dbba69284b27: Pulling fs layer
+9baf437a1bad: Pulling fs layer
+6ade5c59e324: Pulling fs layer
+b19a994f6d4c: Pulling fs layer
+8fc2294f89de: Pulling fs layer
+9dc715194c21: Pulling fs layer
+308c47aa0328: Pulling fs layer
+8b8110dddd0a: Pulling fs layer
+46814cdfd5a4: Pulling fs layer
+8959c15618e0: Pulling fs layer
+08f92dda69e9: Pulling fs layer
+0bc6b23a92e1: Pulling fs layer
+fdf025e19fe1: Pulling fs layer
+b19a994f6d4c: Waiting
+8fc2294f89de: Waiting
+9dc715194c21: Waiting
+8b8110dddd0a: Waiting
+308c47aa0328: Waiting
+0bc6b23a92e1: Waiting
+46814cdfd5a4: Waiting
+fdf025e19fe1: Waiting
+8959c15618e0: Waiting
+08f92dda69e9: Waiting
+9baf437a1bad: Verifying Checksum
+9baf437a1bad: Download complete
+6ade5c59e324: Verifying Checksum
+6ade5c59e324: Download complete
+dbba69284b27: Verifying Checksum
+dbba69284b27: Download complete
+9dc715194c21: Verifying Checksum
+9dc715194c21: Download complete
+b19a994f6d4c: Verifying Checksum
+b19a994f6d4c: Download complete
+8b8110dddd0a: Download complete
+46814cdfd5a4: Verifying Checksum
+46814cdfd5a4: Download complete
+308c47aa0328: Verifying Checksum
+308c47aa0328: Download complete
+8959c15618e0: Download complete
+08f92dda69e9: Download complete
+dbba69284b27: Pull complete
+9baf437a1bad: Pull complete
+6ade5c59e324: Pull complete
+8fc2294f89de: Verifying Checksum
+8fc2294f89de: Download complete
+fdf025e19fe1: Verifying Checksum
+fdf025e19fe1: Download complete
+0bc6b23a92e1: Verifying Checksum
+0bc6b23a92e1: Download complete
+b19a994f6d4c: Pull complete
+8fc2294f89de: Pull complete
+9dc715194c21: Pull complete
+308c47aa0328: Pull complete
+8b8110dddd0a: Pull complete
+46814cdfd5a4: Pull complete
+8959c15618e0: Pull complete
+08f92dda69e9: Pull complete
+0bc6b23a92e1: Pull complete
+fdf025e19fe1: Pull complete
+Digest: sha256:e5228dfacdb22459521af05aaf9590783af95aae450392c8ef4e5d5f4e5fb328
+Status: Downloaded newer image for navn1/atomfinder_skunkworks:simulation

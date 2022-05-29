@@ -21,8 +21,8 @@ jobs:
 
     - name: Build the tagged Docker image
       working-directory: ./model
-      run: docker build --tag navn1/atomfinder_skunkworks:model1 .
+      run: docker build --tag navn1/atomfinder_skunkworks:model2 .
 
     - name: Push the tagged Docker image
-      run: docker push navn1/atomfinder_skunkworks:model1
+      run: docker push navn1/atomfinder_skunkworks:model2
 

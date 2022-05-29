@@ -1,0 +1,7 @@
+Matplotlib created a temporary config/cache directory at /var/lib/condor/execute/slot1/dir_33279/matplotlib-0itraz34 because the default path (/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Traceback (most recent call last):
+  File "/simulationScript.py", line 70, in <module>
+    simulate(structure_prep())
+  File "/simulationScript.py", line 13, in structure_prep
+    file = read(sys.argv[1])
+IndexError: list index out of range

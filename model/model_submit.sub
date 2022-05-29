@@ -8,7 +8,7 @@
 universe = docker
 transfer_input_files = ./data
 
-docker_image = navn1/atomfinder_skunkworks:model1
+docker_image = navn1/atomfinder_skunkworks:model2
 # arguments = --gpus all
 log = log.simulation_$(Cluster)
 #
