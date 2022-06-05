@@ -8,7 +8,7 @@
 universe = docker
 transfer_input_files = ./data
 
-docker_image = navn1/atomfinder_skunkworks:model2
+docker_image = navn1/atomfinder_skunkworks:model
 # arguments = --gpus all
 log = log.simulation_$(Cluster)
 #
@@ -40,7 +40,7 @@ environment = "CUPY_CACHE_DIR=""/var/local/cupycache"" MPLCONFIGDIR=""/var/local
 request_cpus = 1
 request_gpus = 1
 request_memory = 100GB
-request_disk = 20000MB
+request_disk = 30000MB
 #
 #
 # Tell HTCondor to run 1 instance of our job:
