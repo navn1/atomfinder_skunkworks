@@ -17,6 +17,6 @@ RUN ln -snf /usr/share/zoneinfo/$CONTAINER_TIMEZONE /etc/localtime && echo $CONT
 RUN apt-get update && apt-get install -y python3-opencv
 RUN pip install opencv-python
 
-RUN pip install atomai
+RUN pip install git+https://github.com/wdwzyyg/atomai.git
 
 CMD ["python3", "data/modelTrainingScript.py", "data/Trainingdata.npz"]
