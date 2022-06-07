@@ -20,7 +20,7 @@ def makeModel(learningRate, X_train, y_train, X_test, y_test):
   # You can use the much smaller training_cycles for testing, adjust it according to training convergence
   # Test changing loss function to mse instead of default ce
   model_semantic.fit(X_train, y_train, X_test, y_test, lr_scheduler=[learningRate], training_cycles=500, 
-  plot_training_history = True, compute_accuracy = True, swa=True, filename = './data/model_'+ sys.argv[1][5:-4] + 'lr'+learningRate)
+  plot_training_history = True, compute_accuracy = True, swa=True, filename = './data/model_'+ sys.argv[1][5:-4] + 'lr'+str(learningRate))
   
 if __name__ == "__main__":
   data = np.load(os.getcwd() + '/' + sys.argv[1], allow_pickle=True)
