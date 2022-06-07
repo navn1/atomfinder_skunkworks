@@ -10,7 +10,7 @@ transfer_input_files = ./data
 
 docker_image = navn1/atomfinder_skunkworks:model
 # arguments = --gpus all
-log = log.simulation_$(Cluster)
+log = log.model_$(Cluster)
 #
 # Specify your executable (single binary or a script that runs several
 #  commands), arguments, and a files for HTCondor to store standard
@@ -18,8 +18,8 @@ log = log.simulation_$(Cluster)
 #  $(Process) will be a integer number for each job, starting with "0"
 #  and increasing for the relevant number of jobs.
 
-output = out.simulation_$(Cluster)_$(Process)
-error = err.simulation_$(Cluster)_$(Process)
+output = out.model_$(Cluster)_$(Process)
+error = err.model_$(Cluster)_$(Process)
 #
 # Specify that HTCondor should transfer files to and from the
 #  computer where each job runs. The last of these lines *would* be
