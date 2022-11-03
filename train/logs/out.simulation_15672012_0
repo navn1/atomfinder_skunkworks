@@ -1,0 +1,13 @@
+Data loaded.
+Start training.
+Epoch 1/500 ... Training loss: 0.7025 ... Test loss: 0.6772 ... Train Accuracy: 0.4157 ... Test Accuracy: 0.4781 ... GPU memory usage: 13914/40536
+Epoch 100/500 ... Training loss: 0.423 ... Test loss: 0.4755 ... Train Accuracy: 0.5079 ... Test Accuracy: 0.4829 ... GPU memory usage: 13914/40536
+Epoch 200/500 ... Training loss: 0.1349 ... Test loss: 1.3607 ... Train Accuracy: 0.5 ... Test Accuracy: 0.3276 ... GPU memory usage: 13914/40536
+Epoch 300/500 ... Training loss: 0.0527 ... Test loss: 0.195 ... Train Accuracy: 0.5 ... Test Accuracy: 0.5221 ... GPU memory usage: 13914/40536
+Epoch 400/500 ... Training loss: 0.0284 ... Test loss: 2.3722 ... Train Accuracy: 0.5 ... Test Accuracy: 0.4796 ... GPU memory usage: 13914/40536
+Epoch 500/500 ... Training loss: 0.0828 ... Test loss: 0.1755 ... Train Accuracy: 0.5345 ... Test Accuracy: 0.518 ... GPU memory usage: 13914/40536
+Model (final state) evaluation loss: 0.2529
+Model (final state) IoU: 0.5175
+Performing stochastic weight averaging...
+Model (final state) evaluation loss: 0.4122
+Model (final state) IoU: 0.4783

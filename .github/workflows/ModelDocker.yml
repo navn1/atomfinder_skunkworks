@@ -3,10 +3,10 @@ name: Model Docker Image CI
 on:
   push:
     branches: [ main ]
-    paths: model/**
+    paths: train/**
   pull_request:
     branches: [ main ]
-    paths: model/**
+    paths: train/**
 jobs:
 
   build:
@@ -20,9 +20,9 @@ jobs:
       run: echo ${{ secrets.DOCKER_HUB_PASS }} | docker login -u ${{ secrets.DOCKER_HUB_USER }} --password-stdin
 
     - name: Build the tagged Docker image
-      working-directory: ./model
-      run: docker build --tag navn1/atomfinder_skunkworks:model .
+      working-directory: ./train
+      run: docker build --tag navn1/atomfinder_skunkworks:train .
 
     - name: Push the tagged Docker image
-      run: docker push navn1/atomfinder_skunkworks:model
+      run: docker push navn1/atomfinder_skunkworks:train
 
